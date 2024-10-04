@@ -1,0 +1,146 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    font-family : "Poppins", system-ui;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Welcome screen styles */
+#welcome-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container {
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 150px;
+}
+
+/* Loading animation styles */
+.loading {
+    display: flex;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    background-color: #333;
+    border-radius: 50%;
+    animation: bounce 1s infinite;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Login screen styles */
+#login-screen {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(237, 223, 200);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+#login-screen h2 {
+    margin-bottom: 20px;
+}
+
+#login-screen label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#login-screen input {
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#login-screen button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#login-screen button:hover {
+    background-color: #555;
+}
+
+/* Error message styling */
+#error-message {
+    color: red;
+    margin-top: 10px;
+    display: none;
+}
+
+#error-message.hidden {
+    display: none;
+}
+
+#error-message:not(.hidden) {
+    display: block;
+}
+
+/* Dashboard screen styles */
+#dashboard-screen {
+    display: none; /* Hidden by default */
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#dashboard-screen h2 {
+    margin-bottom: 20px;
+}
+
+#dashboard-screen p {
+    font-size: 18px;
+}

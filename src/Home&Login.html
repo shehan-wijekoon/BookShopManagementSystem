@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro and Login Screen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,
+                wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Welcome screen with logo and loading animation -->
+    <div id="welcome-screen">
+        <div class="logo-container">
+            <img src="C:\Users\SINGER\OneDrive\Pictures\images.png" alt="Logo" class="logo">
+        </div>
+        <div class="loading">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <!-- Login screen (Initially hidden) -->
+    <div id="login-screen" class="hidden">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+            <p id="error-message" class="error hidden">Invalid username or password!</p>
+        </form>
+    </div>
+
+    <!-- Dashboard screen (Initially hidden) -->
+    <div id="dashboard-screen" class="hidden">
+        <h2>Welcome to the Dashboard!</h2>
+        <p>This is the dashboard page after a successful login.</p>
+        
+    </div>
+
+
+
+    <!--JavaScript part-->
+    <script>
+        // Function to simulate checking username and password
+        function checkLogin(username, password) {
+            const validUsername = "admin";
+            const validPassword = "password";
+
+            return username === validUsername && password === validPassword;
+        }
+
+        // Handle the transition from welcome screen to login screen
+        setTimeout(function() {
+            document.getElementById('welcome-screen').style.display = 'none';
+            document.getElementById('login-screen').style.display = 'block';
+        }, 3000);
+
+        // Handle login form submission
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (checkLogin(username, password)) {
+                // Hide login screen and show dashboard if login is correct
+                document.getElementById('login-screen').style.display = 'none';
+                document.getElementById('dashboard-screen').style.display = 'block';
+            } else {
+                // Show error message if login fails
+                document.getElementById('error-message').classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
+
