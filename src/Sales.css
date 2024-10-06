@@ -1,0 +1,127 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: #f4f4f4;
+}
+
+h2, h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #0b1121;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 30px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #57679c;
+}
+
+/* Main Sales Report Section */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 250px);
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Sales Report Table */
+.sales-report {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Footer Section for Date, Total Sales and Print */
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-info {
+    font-size: 18px;
+}
+
+.print-btn {
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.print-btn:hover {
+    background-color: #27ae60;
+}
+.back-btn {
+    background-color: #57679c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+    align-self: center;
+    width: 40px;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    background-color: #173a92;
+}

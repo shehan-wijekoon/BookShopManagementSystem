@@ -1,0 +1,209 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: #f4f4f4;
+}
+
+h2, h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #0b1121;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 30px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #57679c;
+}
+
+/* Main Bill Calculator Section */
+.main-container {
+    display: flex;
+    width: calc(100% - 250px);
+    padding: 20px;
+    gap: 30px;
+}
+
+.bill-calculator, .discount-calculator {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bill-calculator {
+    flex: 2;
+}
+
+.discount-calculator {
+    flex: 1;
+}
+
+.search-section input[type="text"], .search-section input[type="number"] {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.add-btn {
+    padding: 10px 20px;
+    background-color: #57679c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: #3d4f7c;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Discount & Profit Section */
+.discount-calculator label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.discount-calculator input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.cal-btn {
+    background-color: #57679c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.cal-btn:hover {
+    background-color: #3d4f7c;
+}
+
+.total-section {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.discard-btn, .print-btn {
+    width: 48%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.discard-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.print-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.discard-btn:hover {
+    background-color: #c0392b;
+}
+
+.print-btn:hover {
+    background-color: #27ae60;
+}
+/* Back Button Styles */
+.back-btn {
+    background-color: #57679c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+    align-self: center;
+    width: 40px;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    background-color: #173a92;
+}
