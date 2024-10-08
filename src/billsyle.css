@@ -14,7 +14,7 @@ h2, h3 {
 /* Sidebar Styles */
 .sidebar {
     width: 250px;
-    height: 100vh;
+    height: auto;
     background-color: #0b1121;
     color: white;
     padding: 20px;
@@ -91,6 +91,19 @@ h2, h3 {
 }
 
 .add-btn:hover {
+    background-color: #3d4f7c;
+}
+
+.cal-discount-btn{
+    padding: 10px 20px;
+    background-color: #57679c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cal-discount-btn:hover {
     background-color: #3d4f7c;
 }
 

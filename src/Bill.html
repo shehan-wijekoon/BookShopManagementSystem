@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb62EQH1SOiJV0wZr2iA1dHLWUBK8IVb5zMw&s"
+        type="image/x-icon">
+
     <title>Bill and Discount Calculator</title>
     <link rel="stylesheet" href="billsyle.css">
 </head>
+
 <body>
 
     <!-- Side Navigation Bar -->
@@ -13,7 +18,7 @@
         <h2>CHANDREASEKARA BOOK SHOP</h2>
         <nav>
             <ul>
-                
+
                 <li><a href="Inventory.html">Inventory</a></li>
                 <li><a href="SalesReport.html">Sales Reports</a></li>
                 <li><a href="#">Help</a></li>
@@ -29,9 +34,10 @@
             <h2>Bill Calculator</h2>
             <br>
             <div class="search-section">
-                <input type="text" placeholder="Search item">
-                <input type="number" placeholder="Quantity">
+                <input type="text" id="item-id" placeholder="Item ID">
+                <input type="number" id="quantity" placeholder="Quantity">
                 <button class="add-btn">Add</button>
+                <button class="cal-btn">Calculate Total</button>
             </div>
 
             <!-- Item Table -->
@@ -60,17 +66,24 @@
 
         <!-- Discount & Profit Section -->
         <div class="discount-calculator">
+            <div class="total-section">
+                <h3>Total price Rs: <span id="total-amount">0.00</span></h3>
+            </div>
+            <br>
+            <hr>
+            <br>
             <h3>Discount Calculator</h3>
             <br>
-            <div>
-                <label>Total Price: Rs</label>
-                <input type="number" placeholder="Enter total price">
+
+            <div class="discount-section">
+
+                <input type="number" id="discount-input" placeholder="Enter discount %">
+                <button class="cal-discount-btn">Calculate Discount</button>
+                <h4>Discounted price: Rs <span id="discounted-price">0.00</span></h4>
+
             </div>
-            <div>
-                <label>Discount: Rs</label>
-                <input type="number" placeholder="Enter discount">
-                <button class="cal-btn">Cal</button>
-            </div>
+            <br>
+            <hr>
 
             <div>
                 <label>Discounted Price: Rs</label>
@@ -87,7 +100,7 @@
                 <label>Profit: Rs</label>
                 <span>100</span>
             </div>
-            
+
             <div class="total-section">
                 <label>Total Bill:</label>
                 <span>Rs: 0.00</span>
@@ -99,6 +112,8 @@
             </div>
         </div>
     </div>
+    <script src="Bill.js"></script>
 
 </body>
+
 </html>
