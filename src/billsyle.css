@@ -107,6 +107,33 @@ h2, h3 {
     background-color: #3d4f7c;
 }
 
+.cal-expences-btn{
+    padding: 10px 20px;
+    background-color: #57679c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cal-expences-btn:hover {
+    background-color: #3d4f7c;
+}
+
+.cal-fuel-btn{
+    padding: 10px 20px;
+    background-color: #57679c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cal-fuel-btn:hover {
+    background-color: #3d4f7c;
+}
+
+
 /* Table Styles */
 table {
     width: 100%;

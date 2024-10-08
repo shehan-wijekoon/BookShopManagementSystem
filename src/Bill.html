@@ -71,7 +71,6 @@
             </div>
             <br>
             <hr>
-            <br>
             <h3>Discount Calculator</h3>
             <br>
 
@@ -85,25 +84,40 @@
             <br>
             <hr>
 
-            <div>
-                <label>Discounted Price: Rs</label>
-                <input type="number" placeholder="Discounted price">
+            <div class="expenses">
+                <h3>Expenses Calculator</h3><br>
+                <label>Total workers:</label>
+                <input type="number" id="numberofworkers" placeholder="Number of workers">
+                <label>Payment:</label>
+                <input type="number" id="payment" placeholder="Payment for one person">
+                <button class="cal-expences-btn">Calculate Total payment</button>
+                <h4>Total payment: Rs <span id="total-payment">0.00</span></h4>
+                <hr>
             </div>
 
-            <div>
-                <label>Expenses: Rs</label>
-                <input type="number" placeholder="Enter expenses">
-                <button class="cal-btn">Cal</button>
+            <div class="fuel expenses">
+                <h3>Fuel Expense Calculator</h3><br>
+                <label>Total distance travel:</label>
+                <input type="number" id="distance" placeholder="Distance">
+                <label>Fuel (L) for 1 KM:</label>
+                <input type="number" id="fuelforone" placeholder="Fuel liters">
+                <label>Price for 1L:</label>
+                <input type="number" id="fuelprice" placeholder="Fuel price">
+                <button class="cal-fuel-btn">Calculate Total Fuel Price</button>
+                <h4>Total fuel price: Rs <span id="total-fuel-price">0.00</span></h4>
+                <hr>
             </div>
 
-            <div class="profit-section">
-                <label>Profit: Rs</label>
-                <span>100</span>
+
+            <div class="total-expenses-section">
+                <h3>Total Expenses</h3>
+                <h4>Total Expenses: Rs <span id="total-expenses">0.00</span></h4>
             </div>
+
 
             <div class="total-section">
                 <label>Total Bill:</label>
-                <span>Rs: 0.00</span>
+                <h3>Total price Rs: <span id="total-bill">0.00</span></h3>
             </div>
 
             <div class="button-container">

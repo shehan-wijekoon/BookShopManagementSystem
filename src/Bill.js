@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         document.getElementById('total-amount').textContent = totprice.toFixed(2);
-
+        
         originalPrice = totprice;
 
     });
@@ -155,5 +155,114 @@ document.querySelector('.cal-discount-btn').addEventListener('click', function (
 
     // display the dis price
     document.getElementById('discounted-price').textContent = discountedPrice.toFixed(2);
+
+    //update the ttal bill
+    document.getElementById('total-bill').textContent = discountedPrice.toFixed(2);
+});
+
+
+//payment calculate part
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.cal-expences-btn').addEventListener('click', function () {
+        // Get values from input fields
+        const numberOfWorkers = parseInt(document.getElementById('numberofworkers').value);
+        const paymentPerPerson = parseFloat(document.getElementById('payment').value);
+        
+        // Validate the input
+        if (isNaN(numberOfWorkers) || numberOfWorkers < 0) {
+            alert('Please enter a valid number of workers');
+            return;
+        }
+        if (isNaN(paymentPerPerson) || paymentPerPerson < 0) {
+            alert('Please enter a valid payment amount');
+            return;
+        }
+
+        // Calculate total payment
+        const totalPayment = numberOfWorkers * paymentPerPerson;
+
+        // Display the total payment
+        document.getElementById('total-payment').textContent = totalPayment.toFixed(2);
+
+        totalPayment = workermoney;
+    });
+});
+
+
+//fuel expence calculation part
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.cal-fuel-btn').addEventListener('click', function () {
+        // Get values from input fields
+        const distance = parseFloat(document.getElementById('distance').value);
+        const fuelPerKm = parseFloat(document.getElementById('fuelforone').value);
+        const pricePerLiter = parseFloat(document.getElementById('fuelprice').value);
+
+        // Validate the input
+        if (isNaN(distance) || distance < 0) {
+            alert('Please enter a valid distance');
+            return;
+        }
+        if (isNaN(fuelPerKm) || fuelPerKm < 0) {
+            alert('Please enter a valid fuel consumption per KM');
+            return;
+        }
+        if (isNaN(pricePerLiter) || pricePerLiter < 0) {
+            alert('Please enter a valid fuel price');
+            return;
+        }
+
+        // Calculate total fuel cost
+        const totalFuelNeeded = distance / fuelPerKm;
+        const totalFuelPrice = totalFuelNeeded * pricePerLiter;
+
+        // Display the total fuel price
+        document.getElementById('total-fuel-price').textContent = totalFuelPrice.toFixed(2);
+
+        totalFuelPrice = fuelmoney;
+    });
+});
+
+
+//total expencses
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to calculate total expenses
+    function calculateTotalExpenses() {
+        // Example values; replace these with your calculations
+        const fuelmoney = parseFloat(document.getElementById('total-fuel-price').textContent) || 0;
+        const workermoney = parseFloat(document.getElementById('total-payment').textContent) || 0;
+
+        const totalExpenses = fuelmoney + workermoney;
+
+        // Update total expenses display
+        document.getElementById('total-expenses').textContent = totalExpenses.toFixed(2);
+    }
+
+    // Add event listeners to your calculation buttons
+    document.querySelector('.cal-expences-btn').addEventListener('click', calculateTotalExpenses);
+    document.querySelector('.cal-fuel-btn').addEventListener('click', calculateTotalExpenses);
+});
+
+
+//discard button and print
+document.addEventListener('DOMContentLoaded', function() {
+    
+    function clearAll() {
+        const okmessage = confirm("Are you sure you want to clear all calculations?");
+        
+        if (okmessage) {
+            
+            location.reload();
+        }
+    }
+    document.querySelector('.discard-btn').addEventListener('click', clearAll);
+
+
+    function printPage() {
+        window.print();
+    }
+
+
+    document.querySelector('.print-btn').addEventListener('click', printPage);
 });
 
