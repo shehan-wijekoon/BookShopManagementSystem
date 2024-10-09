@@ -88,9 +88,9 @@ document.getElementById('addBtn').addEventListener('click', function () {
             priceCell.textContent = `$${parseFloat(updatedPrice).toFixed(2)}`;
 
             // Reset the action cell to original state
-            actionCell.innerHTML = ''; // Clear action cell
-            actionCell.appendChild(editBtn); // Re-add edit button
-            actionCell.appendChild(deleteBtn); // Re-add delete button
+            actionCell.innerHTML = ''; 
+            actionCell.appendChild(editBtn);
+            actionCell.appendChild(deleteBtn);
 
             /*
                 // Prepare data to send
@@ -162,3 +162,63 @@ document.getElementById('addBtn').addEventListener('click', function () {
     document.getElementById('quantity').value = '';
     document.getElementById('price').value = '';
 });
+
+/*
+//each time when the page load this method retrive all the data from the databaase hahahaa
+document.addEventListener('DOMContentLoaded', function() {
+    // Fetch inventory data on page load
+    fetch('Inventory_page_load.php')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const tbody = document.querySelector('tbody');
+            tbody.innerHTML = ''; // Clear existing rows
+
+            // Populate the table with the retrieved data
+            data.forEach(item => {
+                const newRow = document.createElement('tr');
+                
+                const idCell = document.createElement('td');
+                idCell.textContent = item.itemCode; // Adjust according to your column names
+                const nameCell = document.createElement('td');
+                nameCell.textContent = item.itemName;
+                const quantityCell = document.createElement('td');
+                quantityCell.textContent = item.quantity;
+                const priceCell = document.createElement('td');
+                priceCell.textContent = `$${parseFloat(item.price).toFixed(2)}`;
+                const actionCell = document.createElement('td');
+
+                // Create edit and delete buttons
+                const editBtn = document.createElement('button');
+                editBtn.textContent = 'Edit';
+                editBtn.className = 'edit-btn';
+
+                const deleteBtn = document.createElement('button');
+                deleteBtn.textContent = 'Delete';
+                deleteBtn.className = 'del-btn';
+
+                // Add event listeners for buttons (similar to your existing code)
+                // ...
+
+                // Append cells to the new row
+                actionCell.appendChild(editBtn);
+                actionCell.appendChild(deleteBtn);
+                newRow.appendChild(idCell);
+                newRow.appendChild(nameCell);
+                newRow.appendChild(quantityCell);
+                newRow.appendChild(priceCell);
+                newRow.appendChild(actionCell);
+
+                // Append the new row to the table body
+                tbody.appendChild(newRow);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+});
+*/

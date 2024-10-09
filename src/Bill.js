@@ -51,7 +51,7 @@ document.querySelector('.add-btn').addEventListener('click', function () {
 
 });
 
-
+//we can use this code to search item and add to table
 /*
 document.querySelector('.add-btn').addEventListener('click', function () {
     const itemId = document.getElementById('item-id').value;
