@@ -185,3 +185,33 @@ body {
 .dashboard-btn:active {
     transform: scale(0.98);
 }
+
+/* Help Button Styling */
+.help-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #004080;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.help-button i {
+    display: block;
+}
+
+.help-button:hover {
+    background-color: #0059b3;
+    transform: scale(1.1);
+}
+
+.help-button:active {
+    background-color: #003366;
+    transform: scale(1.05);
+}
