@@ -22,7 +22,7 @@ $sql = "INSERT INTO inventory (code, name, quantity, price) VALUES ('$code', '$n
 
 
 if ($conn->query($sql) === TRUE) {
-    header("Location: inventoryy.php");
+    header("Location: inventory.php");
     exit();
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;

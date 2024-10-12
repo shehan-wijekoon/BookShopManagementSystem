@@ -3,7 +3,6 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "bookshop";
-// sad
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -18,7 +17,7 @@ $price = $_POST['price'];
     $sql = "UPDATE inventory SET name='$name', quantity='$quantity',price='$price' WHERE code=$id";
     
     if ($conn->query($sql) === TRUE) {
-   header("Location: inventoryy.php");
+   header("Location: inventory.php");
     } else {
         echo "Error updating record: " . $conn->error;
     }

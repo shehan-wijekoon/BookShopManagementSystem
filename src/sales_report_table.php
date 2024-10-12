@@ -13,22 +13,22 @@ if ($conn->connect_error) {
 }
 
 // SQL query to select all records from your table
-$sql = "SELECT code, name, quantity, price FROM inventory";
+$sql = "SELECT date, id, name, price, quantity, total FROM sales_report";
 $result = $conn->query($sql);
 
 // Output the records in table format
 if ($result->num_rows > 0) {
     echo "<table>";
-    echo "<thead>                        <th>Item Code</th>
-                        <th>Item Name</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Actions</th></tr><thead>";
+    echo "<thead>                        <th>Date</th>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>price</th>
+                        <th>quantity</th>
+                        <th>total</th></tr><thead>";
 
     // Loop through the records and create table rows
     while ($row = $result->fetch_assoc()) {
-        echo "<tbody><tr><td>" . $row["code"] . "</td><td>" . $row["name"] . "</td><td>" . $row["quantity"] ."</td><td>".  $row["price"]."</td><td>"."  <a href='Stock.php' class='edit-btn'>Edit</a>
-                            <a href='delete.php?id=".$row["code"] . "'  class='del-btn'>Delete</a></td></tr><tbody>";
+        echo "<tbody><tr><td>" . $row["date"] . "</td><td>" . $row["id"] . "</td><td>" . $row["name"] ."</td><td>".  $row["price"]."</td><td>".$row["quantity"]."</td><td>".$row["total"]." </td></tr><tbody>";
     }
     echo "</table>";
 } else {
