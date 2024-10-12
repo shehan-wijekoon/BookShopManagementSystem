@@ -16,8 +16,8 @@
         <h2>CHANDREASEKARA BOOK SHOP</h2>
         <nav>
             <ul>
-                <li><a href="Inventory.html">Inventory</a></li>
-                <li><a href="Stock.html">Stock update</a></li>
+                <li><a href="Inventoryy.php">Inventory</a></li>
+                <li><a href="Stock.php">Stock update</a></li>
                 <li><a href="Bill.html">Bill Calculator</a></li>
                 <li><a href="#">Help</a></li>
             </ul>
@@ -32,21 +32,7 @@
         <!-- Sales Report Table -->
         <div class="sales-report">
             <h2>Sales Report</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>date</th>
-                        <th>id</th>
-                        <th>name</th>
-                        <th>price</th>
-                        <th>quantity</th>
-                        <th>total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Sales report rows will go here -->
-                </tbody>
-            </table>
+            <?php include 'sales_report_DB.php'; ?>
         </div>
 
         <!-- Footer Section -->
