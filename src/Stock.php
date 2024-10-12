@@ -17,8 +17,8 @@
             <div class="sidebar">
                 <h2>CHANDREASEKARA BOOK SHOP</h2>
                 <ul>
-                <li><a href="Inventory.html">Inventory</a></li>
-                <li><a href="SalesReport.html">Sales Reports</a></li>
+                <li><a href="Inventory.php">Inventory</a></li>
+                <li><a href="SalesReport.php">Sales Reports</a></li>
                 <li><a href="Bill.html">Bill Calculator</a></li>
                 <li><a href="#">Help</a></li>
                 </ul>
@@ -27,18 +27,18 @@
             <div class="content">
                 <h1>Stock Update</h1>
                 <div class="form-container">
-                    <form id="stock-update-form">
+                    <form id="stock-update-form" action="update.php"  method="POST">
                         <label for="item-id">Item ID:</label>
-                        <input type="text" id="item-id" placeholder="Enter item ID" required>
+                        <input type="text" id="code" name="code" placeholder="Enter item ID" required>
 
                         <label for="item-name">Item Name:</label>
-                        <input type="text" id="item-name" placeholder="Enter item name" required>
+                        <input type="text" id="name" name="name" placeholder="Enter item name" required>
 
                         <label for="quantity">Quantity:</label>
-                        <input type="number" id="quantity" placeholder="Enter quantity" required>
+                        <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" required>
 
                         <label for="price">Price (Rs):</label>
-                        <input type="number" id="price" placeholder="Enter price" required>
+                        <input type="number" id="price" name="price" placeholder="Enter price" required>
 
                         <button type="submit" class="update-btn">Update Stock</button>
                     </form>
