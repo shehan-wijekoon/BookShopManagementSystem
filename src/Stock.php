@@ -39,7 +39,7 @@
 
                         <label for="price">Price (Rs):</label>
                         <input type="number" id="price"  name="price" placeholder="Enter price" required>
-
+<div></div>
                         <button type="submit" class="update-btn">Update Stock</button>
                     </form>
                 </div>
