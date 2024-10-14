@@ -5,8 +5,6 @@ document.querySelector('.add-btn').addEventListener('click', function () {
 
     let itemfound = true;
 
-
-
     if (itemfound) {
         // get the table body
         const tbody = document.querySelector('tbody');
@@ -260,11 +258,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //bill generate
 
-// Function to generate the bill
 function generateBill() {
-    // Get the buyer's name
-    const buyerName = document.getElementById('buyer-name').value;
-
     // Get the current date
     const currentDate = new Date().toLocaleDateString();
 
@@ -299,7 +293,6 @@ function generateBill() {
         <div style="text-align: center;">
             <h2>CHANDREASEKARA BOOK SHOP</h2>
             <h3>Bill Date: ${currentDate}</h3>
-            <h3>Customer Name: ${buyerName}</h3>
             <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
                 <thead>
                     <tr>
