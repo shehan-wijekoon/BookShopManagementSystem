@@ -19,7 +19,7 @@
                 <li><a href="Bill.html">Bill Calculator</a></li>
                 <li><a href="Inventory.php">Inventory</a></li>
                 <li><a href="Stock.php">Stock update</a></li>
-                <li><a href="#">Help</a></li>
+                <li><a href="Help.html">Help</a></li>
             </ul>
         </nav>
 
