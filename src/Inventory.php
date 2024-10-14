@@ -19,7 +19,7 @@
                 <li><a href="Stock.php">Stock update</a></li>
                 <li><a href="SalesReport.php">Sales Report</a></li>
                 <li><a href="Bill.html">Bill Calculator</a></li>
-                <li><a href="#">Help</a></li>
+                <li><a href="Help.html">Help</a></li>
             </ul>
         </nav>
 
@@ -33,17 +33,19 @@
         <div class="inventory-header">
             <h1>Inventory</h1>
             <div class="input-group">
-<form action="add_items_to_inventory.php"  method="POST"   >
-<input type="text" id="code" name="code" placeholder="Item Code">
+                <form action="add_items_to_inventory.php"  method="POST"   >
+                <input type="text" id="code" name="code" placeholder="Item Code">
                 <input type="text" id="name" name="name" placeholder="Item Name">
                 <input type="number" id="quantity" name="quantity" placeholder="Quantity" min="1">
                 <input type="number" id="price" name="price" placeholder="Price" min="0.01" step="0.01">
                 <button class="btn" id="addBtn" name="">Add</button>
-</form>
-<form action="">
-<input type="text" id="itemid" placeholder="Search the item">
-<button class="btn" id="searchBtn">Search</button>
-</form>
+        </form>
+        <form action="">
+        <input type="text" id="itemid" placeholder="Search the item">
+        <button class="btn" id="searchBtn">Search</button>
+        <button class="btn" id="loadBtn">Load</button>
+        
+        </form>
                 <!--
                     <button class="savebtn" id="saveBtn">Save to Database</button>
                 -->
