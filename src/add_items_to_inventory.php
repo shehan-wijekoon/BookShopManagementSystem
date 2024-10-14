@@ -12,6 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// fahfash
 $code = $_POST['code'];
 $name = $_POST['name'];
 $quantity = $_POST['quantity'];

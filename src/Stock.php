@@ -17,12 +17,13 @@
             <div class="sidebar">
                 <h2>CHANDREASEKARA BOOK SHOP</h2>
                 <ul>
-                <li><a href="Inventory.php">Inventory</a></li>
-                <li><a href="SalesReport.php">Sales Reports</a></li>
-                <li><a href="Bill.html">Bill Calculator</a></li>
-                <li><a href="Help.html">Help</a></li>
+                    <li><a href="Inventory.php">Inventory</a></li>
+                    <li><a href="SalesReport.php">Sales Reports</a></li>
+                    <li><a href="Bill.html">Bill Calculator</a></li>
+                    <li><a href="#">Help</a></li>
                 </ul>
-                <button class="back-btn" onclick="">Back</button>
+                <!-- Back Button -->
+                <a href="Home&Login.html" class="back-btn">← Log Out</a>
             </div>
             <div class="content">
                 <h1>Stock Update</h1>

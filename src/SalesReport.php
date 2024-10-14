@@ -16,15 +16,15 @@
         <h2>CHANDREASEKARA BOOK SHOP</h2>
         <nav>
             <ul>
+                <li><a href="Bill.html">Bill Calculator</a></li>
                 <li><a href="Inventory.php">Inventory</a></li>
                 <li><a href="Stock.php">Stock update</a></li>
-                <li><a href="Bill.html">Bill Calculator</a></li>
-                <li><a href="Help.html">Help</a></li>
+                <li><a href="#">Help</a></li>
             </ul>
         </nav>
 
         <!-- Back Button -->
-        <a href="Home&Login.html" class="back-btn">← Back</a>
+        <a href="Home&Login.html" class="back-btn">← Log Out</a>
     </div>
 
     <!-- Main Sales Report Section -->

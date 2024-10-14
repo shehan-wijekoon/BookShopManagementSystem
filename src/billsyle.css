@@ -35,16 +35,36 @@ h2, h3 {
 
 .sidebar nav ul li {
     margin: 30px 0;
+    text-transform: uppercase;
 }
 
 .sidebar nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 17px;
     padding: 15px;
     display: block;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+}
+
+.back-btn {
+    background-color: #57679c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+    align-self: center;
+    width: 100px;
+    text-decoration: none;
+}
+
+
+.back-btn:hover {
+    background-color: #173a92;
 }
 
 .sidebar nav ul li a:hover {
@@ -242,8 +262,4 @@ th, td {
     align-self: center;
     width: 40px;
     text-decoration: none;
-}
-
-.back-btn:hover {
-    background-color: #173a92;
 }
