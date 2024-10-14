@@ -256,13 +256,75 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     document.querySelector('.discard-btn').addEventListener('click', clearAll);
+});
 
+//bill generate
 
-    function printPage() {
-        window.print();
+// Function to generate the bill
+function generateBill() {
+    // Get the buyer's name
+    const buyerName = document.getElementById('buyer-name').value;
+
+    // Get the current date
+    const currentDate = new Date().toLocaleDateString();
+
+    // Get the table of items
+    const itemsTable = document.getElementById('bill-items');
+    let itemsHTML = '';
+    let totalAmount = 0;
+
+    // Loop through table rows to create bill items
+    for (let row of itemsTable.rows) {
+        const id = row.cells[0].innerText;
+        const name = row.cells[1].innerText;
+        const quantity = row.cells[2].innerText;
+        const price = row.cells[3].innerText;
+
+        // Calculate total price
+        totalAmount += parseFloat(price) * parseInt(quantity);
+
+        // Create a row for the bill
+        itemsHTML += `
+            <tr>
+                <td>${id}</td>
+                <td>${name}</td>
+                <td>${quantity}</td>
+                <td>${price}</td>
+            </tr>
+        `;
     }
 
+    // Create the bill content
+    const billContent = `
+        <div style="text-align: center;">
+            <h2>CHANDREASEKARA BOOK SHOP</h2>
+            <h3>Bill Date: ${currentDate}</h3>
+            <h3>Customer Name: ${buyerName}</h3>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${itemsHTML}
+                </tbody>
+            </table>
+            <h3>Total Amount: Rs ${totalAmount.toFixed(2)}</h3>
+        </div>
+    `;
 
-    document.querySelector('.print-btn').addEventListener('click', printPage);
-});
+    // Open a new window for printing
+    const printWindow = window.open('', '', 'height=600,width=800');
+    printWindow.document.write('<html><head><title>Bill</title>');
+    printWindow.document.write('<style>body { font-family: Arial; }</style>');
+    printWindow.document.write('</head><body>');
+    printWindow.document.write(billContent);
+    printWindow.document.write('</body></html>');
+    printWindow.document.close();
+    printWindow.print();
+}
 
