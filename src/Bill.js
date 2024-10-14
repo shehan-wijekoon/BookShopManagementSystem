@@ -267,8 +267,11 @@ function generateBill() {
     let itemsHTML = '';
     let totalAmount = 0;
 
-    // Loop through table rows to create bill items
+    // Loop through table rows, starting from the second row (index 1)
     for (let row of itemsTable.rows) {
+        // Skip the header row
+        if (row.rowIndex === 0) continue;
+
         const id = row.cells[0].innerText;
         const name = row.cells[1].innerText;
         const quantity = row.cells[2].innerText;
@@ -320,4 +323,3 @@ function generateBill() {
     printWindow.document.close();
     printWindow.print();
 }
-
