@@ -181,22 +181,32 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: black
 }
-
-/* Stock bar */
-.stock-bar {
-    width: 100%;
-    background-color: white;
-    border-radius: 4px;
-    overflow: hidden;
-    margin: 10px 0;
+.item
+{
+    margin-bottom: 10px;
+    text-align: center;
+    color: black;
+}
+/* Styling the pie chart container */
+#stockPieChart {
+    max-width: 100%;
+    height: 400px; /* Increased height for better visibility */
 }
 
-.stock-fill {
-    height: 30px;
-    background-color: #3498db;
-    text-align: center;
-    color: white;
-    line-height: 30px;
+/* Legend customization */
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Optional: Style the legend items */
+.chart-legend li {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 14px;
+    color: #666;
 }
 
 /* Button styles */

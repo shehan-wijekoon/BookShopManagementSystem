@@ -64,9 +64,8 @@
             <div class="main-content">
                 <div class="info-div" id="div1">
                     <h3>Stock Overview</h3>
-                    <div class="stock-bar">
-                        <div class="stock-fill" style="width: 70%;">70%</div>
-                    </div>
+                    <p>Displaying the remaining stock</p>
+                    <canvas id="stockPieChart"></canvas>
                     <p>Most Available Item: <strong>Pencils (300 units)</strong></p>
                 </div>
 
@@ -87,7 +86,7 @@
     </div>
 
     <!-- JavaScript part -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="JavaCharts/Charts.js"></script>
     <script>
         // Function to simulate checking username and password
         function checkLogin(username, password) {
@@ -155,6 +154,36 @@
                     }]
                 }
             });
+
+            // Data for the pie chart
+            const stockData = {
+                labels: ['Item A', 'Item B', 'Item C', 'Item D'],
+                datasets: [{
+                    data: [30, 20, 25, 25], // Percentage of stock for each item
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+                    hoverOffset: 4
+                }]
+            };
+
+            // Config for the pie chart
+            const config = {
+                type: 'pie',
+                data: stockData,
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            enabled: true
+                        }
+                    }
+                }
+            };
+
+            // Render the pie chart
+            new Chart(document.getElementById('stockPieChart'), config);
         }
     </script>
 </body>
