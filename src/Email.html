@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Notification</title>
+    <link rel="stylesheet" href="Email.css">
+</head>
+<body>
+    <!--side bar-->
+    <div class="sidebar">
+        <h2>CHANDREASEKARA BOOK SHOP</h2>
+        <nav>
+            <ul>
+
+                <li><a href="Inventory.php">Inventory</a></li>
+                <li><a href="Stock.php">Stock update</a></li>
+                <li><a href="SalesReport.php">Sales Reports</a></li>
+                <li><a href="Help.html">Help</a></li>
+            </ul>
+            <a href="Home&Login.html" class="back-btn"> ‹ Log Out</a>
+        </nav>
+    </div>
+
+    <!--email form-->
+    <div class="emailform">
+        <form action="https://formsubmit.co/emaile-eka-danda-one-methana" method="POST">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="email" name="email" placeholder="Email Address">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+            
+            <input type="hidden" name="_subject" value="New Order Request">
+            <button type="submit">Send</button>
+        </form>
+
+        <form method="POST" action="https://formsubmit.co/your_actual_email@example.com" enctype="multipart/form-data">
+            <label for="email">Your email:</label>
+            <input type="email" name="email" id="email" placeholder="Your email" required>
+            
+            <label for="message">Details of your problem:</label>
+            <textarea name="message" id="message" placeholder="Details of your problem" required></textarea>
+            
+            <label for="attachment">Attach a file (optional):</label>
+            <input type="file" name="attachment" id="attachment" accept="image/png, image/jpeg">
+            
+            <button type="submit">Send Test</button>
+        </form>
+          
+    </div>
+    
+
+</body>
+</html>
