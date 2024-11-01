@@ -16,9 +16,16 @@ body {
     box-sizing: border-box;
     position: fixed;
 }
+.center
+{
+    margin: 0;
+    font-size: 26px;
+    text-align: center;
+}
 
 /* Content Styles */
 .emailform {
+    margin-top: 6%;
     margin-left: 250px;
     padding: 40px;
     width: calc(100% - 250px);

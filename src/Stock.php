@@ -20,7 +20,9 @@
                     <li><a href="Inventory.php">Inventory</a></li>
                     <li><a href="SalesReport.php">Sales Reports</a></li>
                     <li><a href="Bill.html">Bill Calculator</a></li>
+                    <li><a href="Email.html">Email to Supplier</a></li>
                     <li><a href="Help.html">Help</a></li>
+                    
                 </ul>
                 <!-- Back Button -->
                 <a href="Home&Login.html" class="back-btn">← Log Out</a>

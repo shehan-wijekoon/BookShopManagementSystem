@@ -9,33 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Welcome screen with logo and loading animation -->
-    <div id="welcome-screen">
-        <div class="logo-container">
-            <img src="Images/images.png" alt="Logo" class="logo">
-        </div>
-        <div class="loading">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </div>
-    </div>
-
-    <!-- Login screen (Initially hidden) -->
-    <div id="login-screen" class="hidden">
-        <h2>Login</h2>
-        <form id="login-form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br>
-            <button type="submit">Login</button>
-            <p id="error-message" class="error hidden">Invalid username or password!</p>
-        </form>
-    </div>
-
-    <!-- Dashboard screen (Initially hidden) -->
-    <div id="dashboard-screen" class="hidden">
+     <!-- Dashboard screen (Initially hidden) -->
+     <div id="dashboard-screen" class="hidden">
         <h2>Welcome to the Chandrasekara Bookshop!</h2>
         <p>This is your Dashboard. Please select an option or view the details below.</p>
         
@@ -88,6 +63,7 @@
             </div>
         </div>
     </div>
+</body>
 
     <!-- JavaScript part -->
     <script src="JavaCharts/Charts.js"></script>
@@ -189,6 +165,4 @@
             // Render the pie chart
             new Chart(document.getElementById('stockPieChart'), config);
         }
-    </script>
-</body>
-</html>
+    </script></body></html>
