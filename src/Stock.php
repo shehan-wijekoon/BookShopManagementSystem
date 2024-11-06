@@ -19,17 +19,19 @@
                 <ul>
                     <li><a href="Inventory.php">Inventory</a></li>
                     <li><a href="SalesReport.php">Sales Reports</a></li>
-                    <li><a href="Bill.html">Bill Calculator</a></li>
+                    <li><a href="bill.php">Bill Calculator</a></li>
                     <li><a href="Email.html">Email to Supplier</a></li>
                     <li><a href="Help.html">Help</a></li>
                     
                 </ul>
                 <!-- Back Button -->
-                <a href="Home&Login.html" class="back-btn">← Log Out</a>
+                <a href="Home.html" class="back-btn">← Log Out</a>
             </div>
             <div class="content">
                 <h1>Stock Update</h1>
                 <div class="form-container">
+                    
+                    <!-- linked update.php  to perform the query -->
                     <form id="stock-update-form" action="update.php"  method="POST">
                         <label for="item-id">Item ID:</label>
                         <input type="text" id="code" name="code" placeholder="Enter item ID" required>

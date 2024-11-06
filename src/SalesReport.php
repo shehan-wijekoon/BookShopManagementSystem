@@ -16,7 +16,7 @@
         <h2>CHANDREASEKARA BOOK SHOP</h2>
         <nav>
             <ul>
-                <li><a href="Bill.html">Bill Calculator</a></li>
+                <li><a href="bill.php">Bill Calculator</a></li>
                 <li><a href="Inventory.php">Inventory</a></li>
                 <li><a href="Stock.php">Stock update</a></li>
                 <li><a href="Email.html">Email to Supplier</a></li>
@@ -26,7 +26,7 @@
         </nav>
 
         <!-- Back Button -->
-        <a href="Home&Login.html" class="back-btn">← Log Out</a>
+        <a href="Home.html" class="back-btn">← Log Out</a>
     </div>
 
     <!-- Main Sales Report Section -->
@@ -34,6 +34,12 @@
         <!-- Sales Report Table -->
         <div class="sales-report">
             <h2>Sales Report</h2>
+
+            <form action="search_sales_by_date.php" method="POST" class="search-form">
+                <input type="date" id="itemdate" name="item_date" placeholder="Select the item date" required>
+                <button type="submit" class="btn" id="searchBtn">Search</button>
+                <button class="btn" id="loadBtn" type="button" onclick="window.location.href='SalesReport.php'">Load All Items</button>
+            </form>
 
             <?php include 'sales_report_table.php';?>
 

@@ -12,22 +12,24 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// Check if the item ID is set in the URL
+if (isset($_GET['id'])) {
+    $item_id = $_GET['id'];
 
-$id = $_GET['id'];
+    $stmt = $conn->prepare("DELETE FROM inventory WHERE code = ?");
+    $stmt->bind_param("s", $item_id);
 
-// Delete query
-$sql = "DELETE FROM inventory WHERE code=$id";
+    // Execute the delete statement
+    if ($stmt->execute()) {
+        header("Location: inventory.php?message=Item deleted successfully");
+    } else {
+        echo "Error deleting item: " . $conn->error;
+    }
 
-if ($conn->query($sql) === TRUE) {
-    echo "Record deleted successfully";
+    $stmt->close();
 } else {
-    echo "Error deleting record: " . $conn->error;
+    echo "No item ID specified for deletion.";
 }
 
-// Close the connection
 $conn->close();
-
-// Redirect back to the display page after deletion
-header("Location: inventory.php");
-exit;
 ?>

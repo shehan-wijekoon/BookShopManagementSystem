@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb62EQH1SOiJV0wZr2iA1dHLWUBK8IVb5zMw&s" type="image/x-icon">
-    <title>Intro and Login Screen</title>
+    <title>Home</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Ensure Chart.js is included -->
 </head>
+
 <body>
-     <!-- Dashboard screen (Initially hidden) -->
-     <div id="dashboard-screen" class="hidden">
+
+    <!-- Dashboard screen (Initially hidden) -->
+    <div id="dashboard-screen">
         <h2>Welcome to the Chandrasekara Bookshop!</h2>
-        <p>This is your Dashboard. Please select an option or view the details below.</p>
+        <p>Please select an option or view the details below.</p>
         
         <div class="dashboard-container">
             <!-- Sidebar buttons -->
             <div class="sidebar">
-                <button class="dashboard-btn" onclick="location.href='Bill.html'">
+                <button class="dashboard-btn" onclick="location.href='bill.php'">
                     <img src="Images/bill.png" alt="Bill Calculator Icon">
                     <span>Bill Calculator</span>
                 </button>
@@ -36,6 +39,9 @@
                 <button class="dashboard-btn" onclick="location.href='Email.html'">
                     <img src="Images/supplier.png" alt="Stocks Icon">
                     <span>Email to Supplier</span>
+                </button>
+                <button class="dashboard-btn" onclick="location.href='LoginPage.html'">
+                    <span>Log Out</span>
                 </button>
             </div>
 
@@ -63,43 +69,8 @@
             </div>
         </div>
     </div>
-</body>
 
-    <!-- JavaScript part -->
-    <script src="JavaCharts/Charts.js"></script>
     <script>
-        // Function to simulate checking username and password
-        function checkLogin(username, password) {
-            const validUsername = "admin";
-            const validPassword = "password";
-
-            return username === validUsername && password === validPassword;
-        }
-
-        // Handle the transition from welcome screen to login screen
-        setTimeout(function() {
-            document.getElementById('welcome-screen').style.display = 'none';
-            document.getElementById('login-screen').style.display = 'block';
-        }, 3000);
-
-        // Handle login form submission
-        document.getElementById('login-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form from submitting
-
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            if (checkLogin(username, password)) {
-                // Hide login screen and show dashboard if login is correct
-                document.getElementById('login-screen').style.display = 'none';
-                document.getElementById('dashboard-screen').style.display = 'block';
-                loadCharts();
-            } else {
-                // Show error message if login fails
-                document.getElementById('error-message').classList.remove('hidden');
-            }
-        });
-
         // Load charts for fuel expenses and sales inventory
         function loadCharts() {
             const ctx1 = document.getElementById('fuelExpensesChart').getContext('2d');
@@ -145,8 +116,8 @@
                 }]
             };
 
-            // Config for the pie chart
-            const config = {
+            // Render the pie chart
+            new Chart(document.getElementById('stockPieChart'), {
                 type: 'pie',
                 data: stockData,
                 options: {
@@ -160,9 +131,11 @@
                         }
                     }
                 }
-            };
-
-            // Render the pie chart
-            new Chart(document.getElementById('stockPieChart'), config);
+            });
         }
-    </script></body></html>
+
+        // Call loadCharts when the page is fully loaded
+        document.addEventListener('DOMContentLoaded', loadCharts);
+    </script>
+</body>
+</html>

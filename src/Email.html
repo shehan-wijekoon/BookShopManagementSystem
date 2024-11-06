@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb62EQH1SOiJV0wZr2iA1dHLWUBK8IVb5zMw&s"
+        type="image/x-icon">
+
     <title>Email Notification</title>
     <link rel="stylesheet" href="Email.css">
 </head>
@@ -13,12 +16,13 @@
         <nav>
             <ul>
 
+                <li><a href="bill.php">Bill Calculator</a></li>
                 <li><a href="Inventory.php">Inventory</a></li>
                 <li><a href="Stock.php">Stock update</a></li>
                 <li><a href="SalesReport.php">Sales Reports</a></li>
-                <li><a href="Help.html">Help</a></li>
+                <li><a href="Help.html">Help</a></li><br>
             </ul>
-            <a href="Home&Login.html" class="back-btn"> ‹ Log Out</a>
+            <a href="Home.html" class="back-btn"> Home -></a>
         </nav>
     </div>
 
@@ -27,26 +31,24 @@
     <div class="emailform">
         <h1 class="center">Email to the Supplier</h1>
         <br>
-        <form action="https://formsubmit.co/emaile-eka-danda-one-methana" method="POST">
-            
+        <form action="https://formsubmit.co/gawaintds@gmail.com" method="POST">
             <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="email" name="email" placeholder="Email Address">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
+
+            <label for="name">Email To:</label>
+            <input type="email" name="email" placeholder="Email Address" required>
             
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <label for="name">Message:</label>
+            <input type="text" id="name" name="name" placeholder="Write Your Message Here" required>
             
-            <label for="email">Email:</label>
+            <label for="email">From :</label>
             <input type="email" id="email" name="email" placeholder="Email Address" required>
             
             <input type="hidden" name="_subject" value="New Order Request">
             <button type="submit">Send</button>
         </form>
 
-        <form method="POST" action="https://formsubmit.co/your_actual_email@example.com" enctype="multipart/form-data">
-            <label for="email">Your email:</label>
+        <form method="POST" action="https://formsubmit.co/gawaintds@gmail.com" enctype="multipart/form-data">
+            <label for="email">From :</label>
             <input type="email" name="email" id="email" placeholder="Your email" required>
             
             <label for="message">Details of your problem:</label>

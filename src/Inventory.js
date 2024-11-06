@@ -1,18 +1,18 @@
+/*
 document.getElementById('addBtn').addEventListener('click', function () {
-    // get input values
+    // Get input values
     const itemCode = document.getElementById('itemCode').value.trim();
     const itemName = document.getElementById('itemName').value.trim();
     const quantity = document.getElementById('quantity').value.trim();
     const price = document.getElementById('price').value.trim();
 
-
+    // Validate input values
     if (!itemCode || !itemName || !quantity || !price || isNaN(quantity) || isNaN(price) || quantity <= 0 || price <= 0) {
         alert('Please enter valid values in all fields.');
         return;
     }
 
     const tbody = document.querySelector('tbody');
-
     const newRow = document.createElement('tr');
 
     const idCell = document.createElement('td');
@@ -27,28 +27,27 @@ document.getElementById('addBtn').addEventListener('click', function () {
     priceCell.textContent = `$${parseFloat(price).toFixed(2)}`;
 
     // Edit button
-    //this can be a seperate method if u want
     const editBtn = document.createElement('button');
     editBtn.textContent = 'Edit';
     editBtn.className = 'edit-btn';
+
     editBtn.addEventListener('click', function () {
         // Create input fields for editing
         const idInput = document.createElement('input');
-        idInput.className = 'edit-input'; // Add this line
+        idInput.className = 'edit-input';
         idInput.value = itemCode;
 
         const nameInput = document.createElement('input');
-        nameInput.className = 'edit-input'; // Add this line
+        nameInput.className = 'edit-input';
         nameInput.value = itemName;
 
         const quantityInput = document.createElement('input');
-        quantityInput.className = 'edit-input'; // Add this line
+        quantityInput.className = 'edit-input';
         quantityInput.value = quantity;
 
         const priceInput = document.createElement('input');
-        priceInput.className = 'edit-input'; // Add this line
+        priceInput.className = 'edit-input';
         priceInput.value = price;
-
 
         // Replace cells with input fields
         idCell.innerHTML = '';
@@ -91,46 +90,6 @@ document.getElementById('addBtn').addEventListener('click', function () {
             actionCell.innerHTML = ''; 
             actionCell.appendChild(editBtn);
             actionCell.appendChild(deleteBtn);
-
-            /*
-                // Prepare data to send
-                const data = {
-                    itemCode: updatedCode,
-                    itemName: updatedName,
-                    quantity: updatedQuantity,
-                    price: updatedPrice
-                };
-
-                // Send data to the server
-                fetch('Inventory.php', {
-                    method: 'POST', // Use POST method
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data) // Send JSON data
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json(); // Assuming the server responds with JSON
-                })
-                .then(data => {
-                    console.log('Success:', data); // Handle success response
-                   
-                })
-                .catch(error => {
-                    console.error('Error:', error); // Handle error response
-                });
-
-                 
-                // Reset the action cell to original state
-                actionCell.innerHTML = ''; // Clear action cell
-                actionCell.appendChild(editBtn); // Re-add edit button
-                actionCell.appendChild(deleteBtn); // Re-add delete button
-
-             */
-
         });
     });
 
@@ -162,9 +121,8 @@ document.getElementById('addBtn').addEventListener('click', function () {
     document.getElementById('quantity').value = '';
     document.getElementById('price').value = '';
 });
-
+*/
 /*
-//each time when the page load this method retrive all the data from the databaase hahahaa
 document.addEventListener('DOMContentLoaded', function() {
     // Fetch inventory data on page load
     fetch('Inventory_page_load.php')

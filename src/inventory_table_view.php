@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";  // Your server details
-$username = "root";     // Your database username
-$password = "";     // Your database password
-$dbname = "bookshop";  // Your database name
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "bookshop";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -12,14 +12,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// SQL query to select all records from your table
 $sql = "SELECT code, name, quantity, price FROM inventory";
 $result = $conn->query($sql);
 
 // Output the records in table format
 if ($result->num_rows > 0) {
     echo "<table>";
-    echo "<thead>                        <th>Item Code</th>
+    echo "<thead>       <th>Item Code</th>
                         <th>Item Name</th>
                         <th>Quantity</th>
                         <th>Price</th>
@@ -34,7 +33,5 @@ if ($result->num_rows > 0) {
 } else {
     echo "<p>No records found.</p>";
 }
-
-// Close the connection
 $conn->close();
 ?>

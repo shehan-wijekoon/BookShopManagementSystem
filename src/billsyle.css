@@ -223,8 +223,8 @@ th, td {
     margin-top: 20px;
 }
 
-.discard-btn, .print-btn {
-    width: 48%;
+.discard-btn, .print-btn, .save-btn {
+    width: 30%;
     padding: 15px;
     border: none;
     border-radius: 5px;
@@ -242,6 +242,11 @@ th, td {
     color: white;
 }
 
+.save-btn {
+    background-color: rgb(44, 194, 254);
+    color: white;
+}
+
 .discard-btn:hover {
     background-color: #c0392b;
 }
@@ -249,6 +254,7 @@ th, td {
 .print-btn:hover {
     background-color: #27ae60;
 }
+
 /* Back Button Styles */
 .back-btn {
     background-color: #57679c;
@@ -262,4 +268,8 @@ th, td {
     align-self: center;
     width: 40px;
     text-decoration: none;
+}
+
+.save-btn{
+    background-color: #0b1121;
 }

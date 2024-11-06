@@ -25,9 +25,9 @@ body {
 
 /* Content Styles */
 .emailform {
-    margin-top: 6%;
+    margin-top: 0%;
     margin-left: 250px;
-    padding: 40px;
+    padding: 20px;
     width: calc(100% - 250px);
     display: flex;
     flex-direction: column;

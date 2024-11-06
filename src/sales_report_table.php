@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";  // Your server details
-$username = "root";     // Your database username
-$password = "";     // Your database password
-$dbname = "bookshop";  // Your database name
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "bookshop";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -19,7 +19,7 @@ $result = $conn->query($sql);
 // Output the records in table format
 if ($result->num_rows > 0) {
     echo "<table>";
-    echo "<thead>                        <th>Date</th>
+    echo "<thead>       <th>Date</th>
                         <th>id</th>
                         <th>name</th>
                         <th>price</th>
@@ -35,6 +35,5 @@ if ($result->num_rows > 0) {
     echo "<p>No records found.</p>";
 }
 
-// Close the connection
 $conn->close();
 ?>
