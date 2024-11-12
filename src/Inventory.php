@@ -68,3 +68,17 @@
 
 </body>
 </html>
+<?php
+header('Content-Type: application/json');
+
+// Dummy inventory data - Replace with actual database query results
+$inventory = [
+    ["item" => "Pencils", "quantity" => 300],
+    ["item" => "Notebooks", "quantity" => 150],
+    ["item" => "Markers", "quantity" => 100],
+    ["item" => "Erasers", "quantity" => 50]
+];
+
+echo json_encode($inventory);
+?>
+
